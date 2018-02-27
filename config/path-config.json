@@ -11,22 +11,22 @@
   },
   "javascripts": {
     "src": "js",
-    "dest": "js"
+    "dest": "assets/js"
   },
   "stylesheets": {
     "src": "scss",
-    "dest": "css"
+    "dest": "assets/css"
   },
   "images": {
     "src": "images",
-    "dest": "images"
+    "dest": "assets/images"
   },
   "fonts": {
     "src": "fonts",
-    "dest": "fonts"
+    "dest": "assets/fonts"
   },
   "icons": {
     "src": "icons",
-    "dest": "images"
+    "dest": "assets/images"
   }
 }
