@@ -1,0 +1,15 @@
+{
+  "version": "1.2.3",
+  "lang": "en-GB",
+  "author": {
+    "name": "Jaywing",
+    "url": "https://jaywing.com",
+    "footerText": "Made with ♥ at",
+    "createdYear": "2017"
+  },
+  "pages": [
+    { "id": "index", "url": "index.html", "title": "Home" },
+    { "id": "docs", "url": "http://atomic.preview8.jaywing.com/docs/", "title": "Docs" },
+    { "id": "github", "url": "https://github.com/jaywing/atomic", "title": "Github" }
+  ]
+}
