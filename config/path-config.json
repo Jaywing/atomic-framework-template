@@ -1,0 +1,32 @@
+{
+  "src": "./",
+  "dest": "./dist",
+  "html": {
+    "src": "html",
+    "dest": "./"
+  },
+  "static": {
+    "src": "static",
+    "dest": "./"
+  },
+  "javascripts": {
+    "src": "js",
+    "dest": "js"
+  },
+  "stylesheets": {
+    "src": "scss",
+    "dest": "css"
+  },
+  "images": {
+    "src": "images",
+    "dest": "images"
+  },
+  "fonts": {
+    "src": "fonts",
+    "dest": "fonts"
+  },
+  "icons": {
+    "src": "icons",
+    "dest": "images"
+  }
+}
