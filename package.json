@@ -10,7 +10,7 @@
     "blendid": "^4.4.3"
   },
   "devDependencies": {
-    "atomic-framework": "^1.2.6",
+    "atomic-framework": "^2.0.0",
     "babel-plugin-transform-object-assign": "^6.8.0",
     "babel-polyfill": "^6.16.0",
     "bourbon": "^4.3.4",
