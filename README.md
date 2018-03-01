@@ -6,20 +6,14 @@ Bringing together a growing a set of common re-usable components aimed at standa
 up development time.
 
 
-## Installation - NPM Package
-
-```bash
-npm install --save atomic-framework
-```
-
 ## Installation - Site Template
 
 Requires at least version 6 of Node. We reccomend using [nvm](https://github.com/creationix/nvm) to install and manage
 your Node versions.
 
 ```bash
-git clone https://github.com/jaywing/atomic.git AtomicFramework
-cd AtomicFramework
+git clone https://github.com/Jaywing/atomic-framework-template.git AtomicFrameworkTemplate
+cd AtomicFrameworkTemplate
 yarn install
 yarn start
 ```
