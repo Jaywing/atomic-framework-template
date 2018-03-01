@@ -1,13 +1,19 @@
 {
   "name": "atomic-framework-template",
-  "version": "1.2.5",
-  "description": "Front end starter kit for Jaywing (Newbury), bringing together a growing a set of common re-usable components aimed at standardising our front end approach and speed up development time.",
+  "version": "1",
+  "description": "Basic template for the Jaywing Atomic Framework.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=6.11.1",
+    "npm": ">=3.10.3"
+  },
+  "main": "gulpfile.js",
   "scripts": {
     "start": "gulp"
   },
   "dependencies": {
-    "atomic-framework": "^2.2.1"
+    "atomic-framework": "^2.2.3"
   },
-  "devDependencies": {    
+  "devDependencies": {
   }
 }
