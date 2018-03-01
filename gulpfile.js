@@ -12,3 +12,5 @@ gulp.task('serve', ['build'], function(){
 });
 
 gulp.task('default', ['serve']);
+
+gulp.task('production', ['dist']);

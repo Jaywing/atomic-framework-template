@@ -3,7 +3,7 @@
 var browserSync    = require('browser-sync')
 var data           = require('gulp-data')
 var gulp           = require('gulp')
-// var gulpif         = require('gulp-if')
+var gulpif         = require('gulp-if')
 var nunjucksRender = require('gulp-nunjucks-render')
 var fs             = require('fs')
 var path           = require('path');
@@ -38,7 +38,7 @@ gulp.task('html:atomic', function() {
   // .on('error', handleErrors)
   .pipe(nunjucksRender({path: ['./html']}))
   // .on('error', handleErrors)
-  // .pipe(gulpif(global.production, htmlmin(TASK_CONFIG.html.htmlmin)))
-  .pipe(gulp.dest('_build'))
+  .pipe(gulpif(!global.production, gulp.dest('./_build')))
+  .pipe(gulpif(global.production, gulp.dest('./dist')))
   // .pipe(browserSync.stream())
 });

@@ -29,10 +29,10 @@ Browsersync will start a server on port 3000, or do whatever you've configured i
 changes in all connected browsers.
 
 ```bash
-yarn build
+yarn dist
 ```
 
-In development.
+This runs the production task, which compresses required files that aren't already.
 
 ---
 

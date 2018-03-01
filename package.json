@@ -9,11 +9,14 @@
   },
   "main": "gulpfile.js",
   "scripts": {
-    "start": "gulp"
+    "start": "gulp",
+    "dist": "gulp production"
   },
   "dependencies": {
     "atomic-framework": "^2.2.3"
   },
   "devDependencies": {
+    "gulp-if": "^2.0.0",
+    "gulp-sequence": "0.4.6"
   }
 }
