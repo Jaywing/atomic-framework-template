@@ -6,7 +6,7 @@
     "start": "gulp"
   },
   "dependencies": {
-    "atomic-framework": "^2.2.0"
+    "atomic-framework": "^2.2.1"
   },
   "devDependencies": {    
   }
