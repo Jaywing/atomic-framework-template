@@ -12,7 +12,7 @@ gulp.task('serve', ['build'], function(){
 });
 
 gulp.task('watch', function() {
-  gulp.watch('./html', ['html:atomic', browser.reload]);
+  gulp.watch('./html/**/*', ['html:atomic', browser.reload]);
   gulp.watch('./scss/**/*', ['sass:atomic', browser.reload]);
   gulp.watch('./js/**/*', ['webpack', browser.reload]);
   gulp.watch('./images/**/*', ['images:atomic', browser.reload]);
