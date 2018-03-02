@@ -36,4 +36,4 @@ This runs the production task, which compresses required files that aren't alrea
 
 ---
 
-View the [Atomic documentation](http://atomic.preview8.jaywing.com/docs/).
+View the [Atomic documentation](https://jaywing.github.io/atomic-framework-docs/).
