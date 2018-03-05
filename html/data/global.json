@@ -8,8 +8,20 @@
     "createdYear": "2017"
   },
   "pages": [
-    { "id": "index", "url": "index.html", "title": "Home" },
-    { "id": "docs", "url": "http://atomic.preview8.jaywing.com/docs/", "title": "Docs" },
-    { "id": "github", "url": "https://github.com/jaywing/atomic", "title": "Github" }
+    {
+      "id": "index",
+      "url": "index.html",
+      "title": "Home"
+    },
+    {
+      "id": "docs",
+      "url": "https://jaywing.github.io/atomic-framework-docs/",
+      "title": "Docs"
+    },
+    {
+      "id": "github",
+      "url": "https://github.com/Jaywing/atomic-framework",
+      "title": "Github"
+    }
   ]
 }
