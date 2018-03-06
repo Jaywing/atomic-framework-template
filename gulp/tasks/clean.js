@@ -1,7 +1,11 @@
 var gulp = require('gulp');
+var gulpif = require('gulp-if')
 var clean = require('del').sync;
 
-// Erases the dist folder
-gulp.task('clean', function() {
-  clean(['./_build', './dist']);
+gulp.task('clean:build', function () {
+  clean('./_build');
+});
+
+gulp.task('clean:dist', function () {
+  clean('./dist');
 });

@@ -13,7 +13,7 @@ var CONFIG = require('../config.js');
 gulp.task('dist', function (cb) {
   global.production = true
 
-  gulpSequence('clean', 'sass_dist', 'html', 'webpack', 'images', 'icons', 'fonts', cb)
+  gulpSequence('clean:dist', 'sass_dist', 'html', 'webpack', 'images', 'icons', 'fonts', cb)
 });
 
 // Compiles Atomic Sass
