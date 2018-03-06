@@ -1,20 +1,21 @@
 'use strict';
 
-var browserSync    = require('browser-sync')
-var data           = require('gulp-data')
-var gulp           = require('gulp')
-var gulpif         = require('gulp-if')
+var browserSync = require('browser-sync')
+var data = require('gulp-data')
+var gulp = require('gulp')
+var gulpif = require('gulp-if')
 var nunjucksRender = require('gulp-nunjucks-render')
-var fs             = require('fs')
-var path           = require('path');
-var mergeJson      = require('merge-json');
+var fs = require('fs')
+var path = require('path');
+var mergeJson = require('merge-json');
+var htmlmin = require('gulp-htmlmin')
 
 var CONFIG = require('../config.js');
 
 gulp.task('html', ['html:atomic']);
 
-gulp.task('html:atomic', function() {
-  const dataFunction = function(file) {
+gulp.task('html:atomic', function () {
+  const dataFunction = function (file) {
     var globalData = path.resolve('html/data/global.json');
     var pageData = JSON.parse(fs.readFileSync(globalData));
     var filename = file.path.split('.njk')[0];
@@ -34,11 +35,11 @@ gulp.task('html:atomic', function() {
   }
 
   return gulp.src(['./html/**/*.njk', '!./html/{components,layouts,shared,macros,data}/**'])
-  .pipe(data(dataFunction))
-  // .on('error', handleErrors)
-  .pipe(nunjucksRender({path: ['./html']}))
-  // .on('error', handleErrors)
-  .pipe(gulpif(!global.production, gulp.dest('./_build')))
-  .pipe(gulpif(global.production, gulp.dest('./dist')))
-  // .pipe(browserSync.stream())
+    .pipe(data(dataFunction))
+    // .on('error', handleErrors)
+    .pipe(nunjucksRender({ path: ['./html'] }))
+    // .on('error', handleErrors)
+    .pipe(gulpif(!global.production, gulp.dest('./_build')))
+    .pipe(gulpif(global.production, htmlmin({ collapseWhitespace: true })))
+    .pipe(gulpif(global.production, gulp.dest('./dist')))
 });

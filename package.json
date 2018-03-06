@@ -16,6 +16,7 @@
     "atomic-framework": "^2.2.8"
   },
   "devDependencies": {
+    "gulp-htmlmin": "3.0.0",
     "gulp-sequence": "0.4.6"
   }
 }
