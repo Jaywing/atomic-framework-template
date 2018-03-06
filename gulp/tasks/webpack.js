@@ -16,8 +16,6 @@ var webpackConfig = {
   },
   plugins: [],
   resolve: {
-    // extensions: extensions,
-    // alias: TASK_CONFIG.javascripts.alias,
     modules: [path.resolve('js/'), path.resolve('node_modules')]
   },
   module: {

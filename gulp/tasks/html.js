@@ -36,9 +36,7 @@ gulp.task('html:atomic', function () {
 
   return gulp.src(['./html/**/*.njk', '!./html/{components,layouts,shared,macros,data}/**'])
     .pipe(data(dataFunction))
-    // .on('error', handleErrors)
     .pipe(nunjucksRender({ path: ['./html'] }))
-    // .on('error', handleErrors)
     .pipe(gulpif(!global.production, gulp.dest('./_build')))
     .pipe(gulpif(global.production, htmlmin({ collapseWhitespace: true })))
     .pipe(gulpif(global.production, gulp.dest('./dist')))

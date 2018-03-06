@@ -16,7 +16,6 @@ gulp.task('dist', function (cb) {
   gulpSequence('clean:dist', 'sass_dist', 'html', 'webpack', 'images', 'icons', 'fonts', cb)
 });
 
-// Compiles Atomic Sass
 gulp.task('sass_dist', function () {
   return gulp.src(['./scss/app.scss'])
     .pipe(plumber())

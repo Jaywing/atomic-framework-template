@@ -13,7 +13,6 @@ var CONFIG = require('../config.js');
 
 gulp.task('sass', ['sass:atomic']);
 
-// Compiles Atomic Sass
 gulp.task('sass:atomic', function() {
   return gulp.src(['./scss/app.scss'])
     .pipe(sourcemaps.init())
