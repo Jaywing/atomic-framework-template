@@ -13,10 +13,9 @@
     "dist": "gulp production"
   },
   "dependencies": {
-    "atomic-framework": "^2.2.3"
+    "atomic-framework": "^2.2.7"
   },
   "devDependencies": {
-    "gulp-if": "^2.0.0",
     "gulp-sequence": "0.4.6"
   }
 }
