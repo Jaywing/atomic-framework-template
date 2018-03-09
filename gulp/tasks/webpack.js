@@ -1,8 +1,9 @@
-var gulp      = require('gulp');
-var gulpif    = require('gulp-if')
-var webpack   = require('webpack-stream');
-var webpack2  = require('webpack');
-var path      = require('path');
+var gulp = require('gulp');
+var gulpif = require('gulp-if')
+var webpack = require('webpack-stream');
+var webpack2 = require('webpack');
+var UglifyJsPlugin = require('uglifyjs-webpack-plugin');
+var path = require('path');
 
 var webpackConfig = {
   context: path.resolve('js/'),
@@ -14,7 +15,9 @@ var webpackConfig = {
     filename: 'app.js',
     publicPath: '/assets/js/'
   },
-  plugins: [],
+  plugins: [
+    new UglifyJsPlugin()
+  ],
   resolve: {
     modules: [path.resolve('js/'), path.resolve('node_modules')]
   },
@@ -28,7 +31,7 @@ var webpackConfig = {
   }
 }
 
-gulp.task('webpack', function() {
+gulp.task('webpack', function () {
   return gulp.src('./js/app.js')
     .pipe(webpack(webpackConfig, webpack2))
     .pipe(gulpif(!global.production, gulp.dest('./_build/assets/js')))

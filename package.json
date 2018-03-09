@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "gulp-htmlmin": "3.0.0",
-    "gulp-sequence": "0.4.6"
+    "gulp-sequence": "0.4.6",
+    "uglifyjs-webpack-plugin": "^1.0.0"
   }
 }
