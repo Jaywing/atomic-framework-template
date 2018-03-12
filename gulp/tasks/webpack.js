@@ -19,13 +19,19 @@ var webpackConfig = {
     new UglifyJsPlugin()
   ],
   resolve: {
-    modules: [path.resolve('js/'), path.resolve('node_modules')]
+    modules: [
+      path.resolve('js/'), path.resolve('node_modules')
+    ]
   },
   module: {
-    rules: [
+    loaders: [
       {
         loader: 'babel-loader',
-        exclude: path.resolve('node_modules')
+        test: /\.js$/,
+        exclude: path.resolve('node_modules'),
+        query: {
+          presets: [["es2015", { "modules": false }], 'stage-1']
+        }
       }
     ]
   }
