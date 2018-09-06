@@ -25,23 +25,11 @@
 
   <a href="#content" class="SkipLink">Skip to content</a>
 
-  <header role="banner" class="o-Site-header">
-    {% block pageHead %}{% endblock %}
-    <div class="LogoMain">
-      <img src="/assets/images/jaywing-logo.png" alt="">
-    </div>
-    {% include 'shared/main-nav.njk' %}
-  </header>
+  {% block header %}{% endblock %}
 
-  <main id="content" class="o-Site-content">
-    {% block content %}{% endblock %}
-  </main>
+  {% block main %}{% endblock %}
 
-  <footer role="contentinfo" class="o-Site-footer">
-    <div class="o-Container o-Container--centered">
-      <p>&copy; <u id="copyright-year">{{ author.createdYear }}</u> - {{ author.footerText }} <a href="{{ author.url }}">{{ author.name }}</a></p>
-    </div>
-  </footer>
+  {% block footer %}{% endblock %}
 
   <script src="/assets/js/app.js" async></script>
 

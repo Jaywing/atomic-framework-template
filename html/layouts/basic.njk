@@ -1,0 +1,32 @@
+{# Sitecore Rendering: Uop.Web\Views\Shared\Content.cshtml #}
+
+{% set pageId = 'index' %}
+
+{% extends 'layouts/master.njk' %}
+
+{% block metaTitle %}{{ metaTitle }}{% endblock %}
+
+{% block header %}
+  <header role="banner" class="o-Site-header">
+    {% block pageHead %}{% endblock %}
+    <div class="LogoMain">
+      <img src="/assets/images/jaywing-logo.png" alt="">
+    </div>
+    {% include 'shared/main-nav.njk' %}
+  </header>
+{% endblock %}
+
+{% block main %}
+  {% block content %}{% endblock %}
+{% endblock %}
+
+{% block footer %}
+  <footer role="contentinfo" class="o-Site-footer">
+    <div class="o-Container o-Container--centered">
+      <p>&copy; <u id="copyright-year">{{ author.createdYear }}</u> - {{ author.footerText }} <a href="{{ author.url }}">{{ author.name }}</a></p>
+    </div>
+  </footer>
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}
