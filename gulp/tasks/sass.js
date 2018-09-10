@@ -25,11 +25,11 @@ gulp.task('sass:atomic', function() {
     })]))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('./_build/assets/css'))
-    .on('finish', function() {
-      gulp.src(CONFIG.SASS_LINT_FILES)
-        .pipe(sassLint({
-            config: './.sass-lint.yml'
-          }))
-        .pipe(sassLint.format());
-    });
+    // .on('finish', function() {
+    //   gulp.src(CONFIG.SASS_LINT_FILES)
+    //     .pipe(sassLint({
+    //         config: './.sass-lint.yml'
+    //       }))
+    //     .pipe(sassLint.format());
+    // });
 });
