@@ -1,0 +1,101 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageId = 'index' %}
+
+{% extends 'layouts/pattern-lab.njk' %}
+
+{% from 'macros/icon.njk' import Icon %}
+
+{% block metaTitle %}{{ metaTitle }}{% endblock %}
+
+{% block content %}
+
+  <div class="FormContain">
+
+    <div class="FormContain-Text">
+      <p class="TextField">Text</p>
+    </div>
+
+    <div class="FormContain-SingleLineText">
+      <label for="fxb_c786e042-b0f2-4cdd-a19e-8f2d0878cd2c_Fields_d51c3cad-b161-4aa5-be5d-c7d9b17d9fbd__Value" class="">Label</label>
+      <input id="fxb_c786e042-b0f2-4cdd-a19e-8f2d0878cd2c_Fields_d51c3cad-b161-4aa5-be5d-c7d9b17d9fbd__Value" name="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.Fields[d51c3cad-b161-4aa5-be5d-c7d9b17d9fbd].Value" class="" value="" maxlength="255" placeholder="" data-sc-tracking="True" data-sc-field-name="Single-Line Text" type="text">
+      <span class="field-validation-valid" data-valmsg-for="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.Fields[d51c3cad-b161-4aa5-be5d-c7d9b17d9fbd].Value" data-valmsg-replace="true"></span>
+    </div>
+
+    <div class="FormContain-Multiline">
+      <label for="fxb_c786e042-b0f2-4cdd-a19e-8f2d0878cd2c_Fields_4cddf545-3fa8-4b76-a3bd-f55f9759c206__Value" class="">Label</label>
+      <textarea id="fxb_c786e042-b0f2-4cdd-a19e-8f2d0878cd2c_Fields_4cddf545-3fa8-4b76-a3bd-f55f9759c206__Value" name="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.Fields[4cddf545-3fa8-4b76-a3bd-f55f9759c206].Value" class="" rows="4" maxlength="512" placeholder="" data-sc-tracking="True" data-sc-field-name="Multiple-Line Text"></textarea>
+      <span class="field-validation-valid" data-valmsg-for="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.Fields[4cddf545-3fa8-4b76-a3bd-f55f9759c206].Value" data-valmsg-replace="true"></span>
+    </div>
+
+    <div class="FormContain-Number">
+      <label for="fxb_c786e042-b0f2-4cdd-a19e-8f2d0878cd2c_Fields_fe1aac92-8520-43dc-9efa-cd1c396e771d__Value" class="">Label</label>
+      <input id="fxb_c786e042-b0f2-4cdd-a19e-8f2d0878cd2c_Fields_fe1aac92-8520-43dc-9efa-cd1c396e771d__Value" name="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.Fields[fe1aac92-8520-43dc-9efa-cd1c396e771d].Value" class="" data-sc-tracking="True" data-sc-field-name="Number" data-val-number="The field Value must be a number." data-val="true" type="number">
+      <span class="field-validation-valid" data-valmsg-for="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.Fields[fe1aac92-8520-43dc-9efa-cd1c396e771d].Value" data-valmsg-replace="true"></span>
+    </div>
+
+    <div class="FormContain-Checkbox">
+      <input id="fxb_c786e042-b0f2-4cdd-a19e-8f2d0878cd2c_Fields_c767f803-3018-4f93-972d-9ce463d6b4fb__Value" name="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.Fields[c767f803-3018-4f93-972d-9ce463d6b4fb].Value" class="" value="true" data-sc-tracking="True" data-sc-field-name="Checkbox" data-val-required="The Value field is required." data-val="true" type="checkbox"><label class="">Label</label>
+      <input name="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.Fields[c767f803-3018-4f93-972d-9ce463d6b4fb].Value" value="false" type="hidden">
+      <span class="field-validation-valid" data-valmsg-for="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.Fields[c767f803-3018-4f93-972d-9ce463d6b4fb].Value" data-valmsg-replace="true"></span>
+    </div>
+
+    <div class="FormContain-CheckboxList">
+      <legend class="">Checkbox List</legend>
+      <input name="fxb.cbf14b74-6428-426e-9414-51b9cd0b5a7e.Fields[d865d2e2-21ee-4f2b-b6e7-0283ce5510eb].Value" type="hidden">
+      <input name="fxb.cbf14b74-6428-426e-9414-51b9cd0b5a7e.Fields[d865d2e2-21ee-4f2b-b6e7-0283ce5510eb].Value" value="Item 1" data-sc-tracking="True" data-sc-field-name="Checkbox List" type="checkbox">
+      <label>Item 1</label>
+      <input name="fxb.cbf14b74-6428-426e-9414-51b9cd0b5a7e.Fields[d865d2e2-21ee-4f2b-b6e7-0283ce5510eb].Value" value="Item 2" data-sc-tracking="True" data-sc-field-name="Checkbox List" type="checkbox">
+      <label>Item 2</label>
+      <input name="fxb.cbf14b74-6428-426e-9414-51b9cd0b5a7e.Fields[d865d2e2-21ee-4f2b-b6e7-0283ce5510eb].Value" value="Item 3" data-sc-tracking="True" data-sc-field-name="Checkbox List" type="checkbox">
+      <label>Item 3</label>
+      <span class="field-validation-valid" data-valmsg-for="fxb.cbf14b74-6428-426e-9414-51b9cd0b5a7e.Fields[d865d2e2-21ee-4f2b-b6e7-0283ce5510eb].Value" data-valmsg-replace="true"></span>
+    </div>
+
+    <div class="FormContain-Radiolist">
+      <legend class="">Radio Button List</legend>
+      <input name="fxb.cbf14b74-6428-426e-9414-51b9cd0b5a7e.Fields[df4ce756-88b5-476a-90ca-be5166484cb4].Value" value="Item 1" data-sc-tracking="True" data-sc-field-name="Radio Button List" type="radio">
+      <label>
+      Item 1
+      </label>
+      <input name="fxb.cbf14b74-6428-426e-9414-51b9cd0b5a7e.Fields[df4ce756-88b5-476a-90ca-be5166484cb4].Value" value="Item 2" data-sc-tracking="True" data-sc-field-name="Radio Button List" type="radio">
+      <label>
+      Item 2
+      </label>
+      <input name="fxb.cbf14b74-6428-426e-9414-51b9cd0b5a7e.Fields[df4ce756-88b5-476a-90ca-be5166484cb4].Value" value="Item 3" data-sc-tracking="True" data-sc-field-name="Radio Button List" type="radio">
+      <label>
+      Item 3
+      </label>
+      <span class="field-validation-valid" data-valmsg-for="fxb.cbf14b74-6428-426e-9414-51b9cd0b5a7e.Fields[df4ce756-88b5-476a-90ca-be5166484cb4].Value" data-valmsg-replace="true"></span>
+    </div>
+
+    <div class="FormContain-Date">
+      <label for="fxb_c786e042-b0f2-4cdd-a19e-8f2d0878cd2c_Fields_7dbb8f28-b7c7-4905-89b0-bf29babde3f2__Value" class="">Label</label>
+      <input id="fxb_c786e042-b0f2-4cdd-a19e-8f2d0878cd2c_Fields_7dbb8f28-b7c7-4905-89b0-bf29babde3f2__Value" name="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.Fields[7dbb8f28-b7c7-4905-89b0-bf29babde3f2].Value" class="" data-sc-tracking="True" data-sc-field-name="Date" data-val-date="The field Value must be a date." data-val="true" type="date">
+      <span class="field-validation-valid" data-valmsg-for="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.Fields[7dbb8f28-b7c7-4905-89b0-bf29babde3f2].Value" data-valmsg-replace="true"></span>
+    </div>
+
+    <div class="FormContain-Dropdown">
+      <label for="fxb_c786e042-b0f2-4cdd-a19e-8f2d0878cd2c_Fields_3f61b066-6f7f-44eb-bd88-13179fef46f4__Value" class="">Label</label>
+      <select id="fxb_c786e042-b0f2-4cdd-a19e-8f2d0878cd2c_Fields_3f61b066-6f7f-44eb-bd88-13179fef46f4__Value" name="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.Fields[3f61b066-6f7f-44eb-bd88-13179fef46f4].Value" class="" data-sc-tracking="True" data-sc-field-name="Dropdown List">
+        <option label=" "></option>
+      </select>
+      <span class="field-validation-valid" data-valmsg-for="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.Fields[3f61b066-6f7f-44eb-bd88-13179fef46f4].Value" data-valmsg-replace="true"></span>
+    </div>
+
+    <div class="FormContain-Button">
+      <input value="Text" class=" Button Button--primary" name="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.1c4ba3fc-7f7a-4b24-9126-7273615bcc75" type="submit">
+      <input id="fxb_c786e042-b0f2-4cdd-a19e-8f2d0878cd2c_NavigationButtons" name="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.NavigationButtons" value="1c4ba3fc-7f7a-4b24-9126-7273615bcc75" type="hidden">
+      <input id="fxb_c786e042-b0f2-4cdd-a19e-8f2d0878cd2c_1c4ba3fc-7f7a-4b24-9126-7273615bcc75" name="fxb.c786e042-b0f2-4cdd-a19e-8f2d0878cd2c.1c4ba3fc-7f7a-4b24-9126-7273615bcc75" value="0" type="hidden">
+    </div>
+
+  </div>
+
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

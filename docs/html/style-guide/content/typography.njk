@@ -1,0 +1,86 @@
+{#
+  Nunjucks Templating!
+  Homepage: https://mozilla.github.io/nunjucks/
+  Docs: https://mozilla.github.io/nunjucks/api.html
+#}
+
+{% set pageId = 'index' %}
+
+{% extends 'layouts/pattern-lab.njk' %}
+
+{% from 'macros/icon.njk' import Icon %}
+
+{% block metaTitle %}{{ metaTitle }}{% endblock %}
+
+{% block content %}
+
+  <h1 class="Canon">H1 Canon</h1>
+  <h1>H1 Trafalgar</h1>
+  <h2>H2 Double Pica</h2>
+  <h3>H3 Great Primer</h3>
+  <h4>H4 Pica</h4>
+  <h4>H5 Pica</h5>
+  <h4>H6 Pica</h6>
+
+  <p class="Canon">Canon</p>
+  <p class="Trafalgar">Trafalgar</p>
+  <p class="DoublePica">Double Pica</p>
+  <p class="GreatPrimer">Great Primer</p>
+  <p class="Pica">Pica</p>
+  <p class="Long Primer">Long Primer</p>
+  <p class="Brevier">Brevier</p>
+  <p class="Minion">Minion</p>
+
+  <p class="SubHeading">Sub heading</p>
+
+  <p>Paragraph with a <a href="#">link</a>.</p>
+
+  <ul>
+    <li>Unordered list</li>
+    <li>Unordered list</li>
+    <li>Unordered list</li>
+  </ul>
+
+  <ol>
+    <li>Ordered list</li>
+    <li>Ordered list</li>
+    <li>Ordered list</li>
+  </ol>
+
+  <table class="Table">
+    <caption>Table caption</caption>
+    <thead>
+      <tr>
+        <th>Table head</th>
+        <th>Table head</th>
+        <th>Table head</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Table body - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+        <td>Table body - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+        <td>Table body - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+      </tr>
+      <tr>
+        <td>Table body - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+        <td>Table body - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+        <td>Table body - Lorem ipsum dolor sit amet, consectetur adipiscing elit.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <p><a class="Button Button--primary Button--lg">Large Primary Button</a></p>
+
+  <p><a class="Button Button--primary">Primary Button</a></p>
+
+  <p><a class="Button Button--primary Button--sm">Small Primary Button</a></p>
+
+  <p><a class="Button Button--secondary">Secondary Button</a></p>
+
+  <p><a class="Button Button--tertiary">Tertiary Button</a></p>
+
+{% endblock %}
+
+{% block javascript %}
+{% endblock %}

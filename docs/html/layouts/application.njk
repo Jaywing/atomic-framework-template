@@ -1,0 +1,64 @@
+{% from 'macros/icon.njk' import Icon %}
+{% from 'shared/page-nav.njk' import PageSection %}
+<!doctype html>
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="{{ lang }}" class="fonts-loaded">
+<!--#else -->
+<html lang="{{ lang }}">
+<!--#endif -->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="{{ author }}"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <title>{% block metaTitle %}Gulp Asset Pipeline{% endblock %}</title>
+
+  <!-- standard styles - hidden from < ie10 -->
+  <link rel="stylesheet" href="/assets/css/docs.css">
+
+  {% include 'shared/app-icons.njk' %}
+
+  {% block head %}{% endblock %}
+
+</head>
+<body id="top" class="o-Site scrollY">
+
+  <a href="#content" class="SkipLink">Skip to content</a>
+
+  {# <header role="banner" class="o-Site-header docs-GlobalHeader"></header> #}
+
+  <main id="content" class="o-Site-content">
+  {% block main %}
+
+    <div class="Pattern o-Grid o-GridMd--reverse">
+
+      <article class="o-Grid-cell o-SizeMd--9of12 o-SizeLg--10of12">
+      {% block content %}
+
+      {% endblock %}
+      </article>
+
+      <section class="o-Grid-cell o-Size--full o-SizeMd--3of12 o-SizeLg--2of12">
+      {% block sidebar %}
+        {% set model = sections[0] %}
+        {{ PageSection(model) }}
+      {% endblock %}
+      </section>
+
+    </div>
+
+  {% endblock %}
+  </main>
+
+  {# <footer role="contentinfo" class="o-Site-footer docs-footer"></footer> #}
+
+  {# <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.6.0/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script> #}
+
+  <script src="/assets/js/app.js" async></script>
+
+  {% block javascript %}{% endblock %}
+
+</body>
+</html>
