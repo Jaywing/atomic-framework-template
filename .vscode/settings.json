@@ -1,7 +1,5 @@
 {
   "editor.formatOnSave": true,
-  "editor.tabSize": 2,
-  "explorer.autoReveal": false,
   "javascript.format.enable": true,
   "files.trimTrailingWhitespace": true,
   "files.insertFinalNewline": true,
