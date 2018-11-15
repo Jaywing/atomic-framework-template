@@ -16,7 +16,7 @@
   },
   "prettier": {},
   "dependencies": {
-    "atomic-framework": "^2.2.16"
+    "atomic-framework": "*"
   },
   "devDependencies": {
     "gulp-htmlmin": "3.0.0",
