@@ -1,0 +1,68 @@
+{
+  "version": "1.2.3",
+  "lang": "en-GB",
+  "author": {
+    "name": "University of Portsmouth Documentation",
+    "url": "https://jaywing.com",
+    "footerText": "",
+    "createdYear": "2018"
+  },
+  "sections": [
+    {
+      "title": "Docs",
+      "url": "/patternlab/",
+      "children": [
+        {
+          "title": "Style Guide",
+          "disabled": true,
+          "children": [
+            {
+              "title": "Colour Palette",
+              "url": "/patternlab/style-guide/colour-palette.html"
+            },
+            {
+              "title": "Typography",
+              "url": "/patternlab/style-guide/typography.html"
+            },
+            {
+              "title": "Forms",
+              "url": "/patternlab/style-guide/forms.html"
+            }
+          ]
+        },
+        {
+          "title": "Global Components",
+          "disabled": true,
+          "children": [
+            {
+              "title": "Footer",
+              "url": "/patternlab/global/footer.html"
+            }
+          ]
+        },
+        {
+          "title": "Common Components",
+          "disabled": true,
+          "children": [
+            {
+              "title": "Navigation",
+              "url": "/patternlab/common/navigation.html",
+              "disabled": true,
+              "children": [
+                {
+                  "title": "Breadcrumbs",
+                  "url": "/patternlab/common/breadcrumbs.html"
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "Contexts",
+          "disabled": true,
+          "children": []
+        }
+      ]
+    }
+  ]
+}

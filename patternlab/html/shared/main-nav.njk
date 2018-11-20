@@ -1,4 +1,4 @@
-{% from 'macros/menu.njk' import MenuLink, MenuHeader %}
+{% from 'macros/menu.njk' import menuLink, menuHeader %}
 {% from 'macros/toggle-button.njk' import ToggleButton %}
 
     <div class="c-nav-main">
@@ -9,10 +9,10 @@
 
           <ul class="c-menu c-menu--vertical c-menu@sm">
 
-            {{ MenuHeader('Atomic', 'index.html', 'c-menu__item--left c-menu__item--flush') }}
+            {{ menuHeader('Atomic', 'index.html', 'c-menu__item--left c-menu__item--flush') }}
 
             {% for page in pages %}
-              {{ MenuLink(page.id, page.title, page.url, pageId, '') }}
+              {{ menuLink(page.id, page.title, page.url, pageId, '') }}
             {% endfor %}
 
           </ul>

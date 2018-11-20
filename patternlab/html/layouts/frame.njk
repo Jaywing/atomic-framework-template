@@ -1,0 +1,29 @@
+<!doctype html>
+<!--#if expr="$HTTP_COOKIE=/fonts\-loaded\=true/" -->
+<html lang="{{ lang }}" class="fonts-loaded">
+<!--#else -->
+<html lang="{{ lang }}">
+<!--#endif -->
+<head>
+
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="author" content="{{ author }}"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1"/>
+  <title>{% block metaTitle %}Gulp Asset Pipeline{% endblock %}</title>
+
+  <!-- standard styles - hidden from < ie10 -->
+  <link rel="stylesheet" href="/assets/css/app.css">
+
+</head>
+<body id="top" class="o-site u-scrollY">
+
+{% block content %}
+{% endblock %}
+
+<script src="/assets/js/app.js" async></script>
+
+{% block javascript %}{% endblock %}
+
+</body>
+</html>

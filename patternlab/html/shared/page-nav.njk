@@ -1,0 +1,55 @@
+{% from 'macros/icon.njk' import Icon %}
+
+{% macro navItems(model) %}
+  <ul class="c-menu c-menu--vertical">
+    {% for child in model %}
+      {{ navItem(child) }}
+    {% endfor %}
+  </ul>
+{% endmacro %}
+
+{% macro navItem(model)%}
+  {% if model.children %}
+  <li class="c-menu__item c-menu__item--hasChildren">
+    {% if model.disabled %}
+    <a class="c-menu__link c-text--disabled">
+      {{model.title}}
+    </a>
+    {% else %}
+    <a href="{{model.url}}" class="c-menu__link">
+      {{model.title}}
+    </a>
+    {% endif %}
+    <div class="c-menu__child c-menu__child--section">
+      {{ navItems(model.children) }}
+    </div>
+  </li>
+  {% else %}
+  <li class="c-menu__item">
+    {% if model.disabled %}
+    <a class="c-menu__link c-text--disabled">
+      {{model.title}}
+    </a>
+    {% else %}
+    <a href="{{model.url}}" class="c-menu__link">
+      {{model.title}}
+    </a>
+    {% endif %}
+  </li>
+  {% endif %}
+{% endmacro %}
+
+{% macro PageSection(model) %}
+<div class="c-nav-page">
+    <h2 class="c-nav-page__title">
+      <a href="/docs/">{{model.title}}</a>
+    </h2>
+    <nav role="navigation">
+      <ul class="c-menu c-menu--vertical">
+        {% for child in model.children %}
+          {{ navItem(child) }}
+        {% endfor %}
+      </ul>
+    </nav>
+</div>
+{% endmacro %}

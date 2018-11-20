@@ -7,9 +7,9 @@
 {% block metaTitle %}{{ metaTitle }}{% endblock %}
 
 {% block header %}
-  <header role="banner" class="o-Site-header">
+  <header class="o-site__header">
     {% block pageHead %}{% endblock %}
-    <div class="LogoMain">
+    <div class="c-site-logo">
       <img src="/assets/images/jaywing-logo.png" alt="">
     </div>
     {% include 'shared/main-nav.njk' %}
@@ -21,8 +21,8 @@
 {% endblock %}
 
 {% block footer %}
-  <footer role="contentinfo" class="o-Site-footer">
-    <div class="o-Container o-Container--centered">
+  <footer class="o-site__footer">
+    <div class="o-container o-container--centered">
       <p>&copy; <u id="copyright-year">{{ author.createdYear }}</u> - {{ author.footerText }} <a href="{{ author.url }}">{{ author.name }}</a></p>
     </div>
   </footer>

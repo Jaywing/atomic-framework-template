@@ -1,0 +1,28 @@
+{% from 'macros/toggle-button.njk' import ToggleButton %}
+
+{% macro NavbarItem(id, title, active, ready) %}
+<li class="c-menu__item{% if id == active %} is-active{% endif %}">
+  {% if ready %}
+    <a href="/docs/{{id}}" class="c-menu__link">{{title}}</a>
+  {% else %}
+    <a class="c-menu__link is-disabled" disabled>{{title}}</a>
+  {% endif %}
+</li>
+{% endmacro %}
+
+<nav class="o-container o-container--centered c-nav-responsive c-nav-responsive@md">
+
+  {{ ToggleButton("parent", "ToggleButton--hideText") }}
+
+  <ul class="c-menu c-menu--vertical c-menu@md">
+    <li class="c-menu__item c-menu__item--left w-logo">
+      <a href="/docs/">
+        <img src="/images/jaywing-logo.png" width="65" height="65" alt="Jaywing">
+      </a>
+    </li>
+    {% for section in docs_sections %}
+      {{NavbarItem(section.id, section.title, sectionid, section.ready)}}
+    {% endfor %}
+  </ul>
+
+</nav>

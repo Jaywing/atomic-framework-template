@@ -48,14 +48,14 @@ gulp.task("html:atomic", function() {
 
 gulp.task("html:docs", function() {
   const dataFunction = function(file) {
-    var globalData = path.resolve("docs/html/data/global.json");
+    var globalData = path.resolve("patternlab/html/data/global.json");
     var pageData = JSON.parse(fs.readFileSync(globalData));
     var filename = file.path.split(".njk")[0];
     var splitOperator = "\\";
     if (filename.toString().indexOf(splitOperator) < 0) splitOperator = "/";
     filename = filename.toString().split(splitOperator);
     filename = filename[filename.length - 1] + ".json";
-    var dataPath = path.resolve("docs/html/data/" + filename);
+    var dataPath = path.resolve("patternlab/html/data/" + filename);
 
     if (fs.existsSync(dataPath)) {
       pageData = mergeJson.merge(
@@ -69,10 +69,10 @@ gulp.task("html:docs", function() {
   return gulp
     .src([
       "./html/componenets/**/*.njk",
-      "./docs/html/**/*.njk",
-      "!./docs/html/{components,layouts,shared,macros,data}/**"
+      "./patternlab/html/**/*.njk",
+      "!./patternlab/html/{components,layouts,shared,macros,data}/**"
     ])
     .pipe(data(dataFunction))
-    .pipe(nunjucksRender({ path: ["./docs/html", "./html"] }))
-    .pipe(gulp.dest("./_build/docs"));
+    .pipe(nunjucksRender({ path: ["./patternlab/html", "./html"] }))
+    .pipe(gulp.dest("./_build/patternlab"));
 });
