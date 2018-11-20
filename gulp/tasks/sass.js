@@ -38,7 +38,7 @@ gulp.task("sass:atomic", function() {
 // Compiles Docs Sass
 gulp.task("sass:docs", function() {
   return gulp
-    .src(["./patternlab/scss/docs.scss"])
+    .src(["./patternlab/scss/patternlab.scss"])
     .pipe(sourcemaps.init())
     .pipe(plumber())
     .pipe(
