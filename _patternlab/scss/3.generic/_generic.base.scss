@@ -6,6 +6,7 @@ body {
 }
 
 .o-site__content {
+    height: calc(100% - 65px);
     padding: 0 !important;
 
     &::after {
