@@ -10,7 +10,7 @@
   "sections": [
     {
       "title": "Docs",
-      "url": "/patternlab/",
+      "url": "/_patternlab/",
       "children": [
         {
           "title": "Style Guide",
@@ -18,15 +18,15 @@
           "children": [
             {
               "title": "Colour Palette",
-              "url": "/patternlab/style-guide/colour-palette.html"
+              "url": "/_patternlab/style-guide/colour-palette.html"
             },
             {
               "title": "Typography",
-              "url": "/patternlab/style-guide/typography.html"
+              "url": "/_patternlab/style-guide/typography.html"
             },
             {
               "title": "Forms",
-              "url": "/patternlab/style-guide/forms.html"
+              "url": "/_patternlab/style-guide/forms.html"
             }
           ]
         },
@@ -36,7 +36,7 @@
           "children": [
             {
               "title": "Footer",
-              "url": "/patternlab/global/footer.html"
+              "url": "/_patternlab/global/footer.html"
             }
           ]
         },
@@ -46,12 +46,12 @@
           "children": [
             {
               "title": "Navigation",
-              "url": "/patternlab/common/navigation.html",
+              "url": "/_patternlab/common/navigation.html",
               "disabled": true,
               "children": [
                 {
                   "title": "Breadcrumbs",
-                  "url": "/patternlab/common/breadcrumbs.html"
+                  "url": "/_patternlab/common/breadcrumbs.html"
                 }
               ]
             }
