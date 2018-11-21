@@ -1,6 +1,3 @@
-$c-uop-black: #222;
-$c-uop-offwhite: #c5c5c5;
-
 body {
     background: $c-light-15;
 }
@@ -36,8 +33,11 @@ body {
 .c-pattern__heading {
     flex: 0 1 auto;
     padding: $g-spacer;
-    background: $c-primary;
-    color: $c-light;
+    background: $c-light-15;
+
+    h1 {
+        @include double-pica;
+    }
 }
 
 .c-pattern__lab {
@@ -71,6 +71,10 @@ body {
             border-radius: 0;
             text-align: left;
         }
+    }
+
+    .c-menu__item {
+        margin: 0;
     }
 
     .c-menu__link {
