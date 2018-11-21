@@ -54,5 +54,5 @@ gulp.task("sass:docs", function() {
       ])
     )
     .pipe(sourcemaps.write("."))
-    .pipe(gulp.dest("./_build/assets/css"));
+    .pipe(gulp.dest("./_build/patternlab/assets/css"));
 });
