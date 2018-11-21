@@ -1,0 +1,16 @@
+.t-site__header {
+    display: flex;
+    background: $c-dune;
+
+    .c-site-nav {
+        .c-button {
+            height: 100%;
+            margin: 0;
+            border-radius: 0;
+        }
+    }
+
+    .c-site-logo {
+        flex: 1;
+    }
+}

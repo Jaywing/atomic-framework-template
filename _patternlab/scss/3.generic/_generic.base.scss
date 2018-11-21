@@ -1,5 +1,5 @@
 body {
-    background: $c-light-15;
+    background: $c-alto;
 }
 
 .o-site__content {
@@ -33,7 +33,7 @@ body {
 .c-pattern__heading {
     flex: 0 1 auto;
     padding: $g-spacer;
-    background: $c-light-15;
+    border-bottom: 1px solid $c-alto;
 
     h1 {
         @include double-pica;
@@ -50,7 +50,7 @@ body {
     width: 100%;
     height: 100%;
     padding: $g-spacer;
-    border: 1px solid $c-light-15;
+    border: 1px solid $c-silver-chalice;
 }
 
 .c-pattern-colour {
@@ -61,6 +61,7 @@ body {
 
 .c-nav-page {
     height: 100%;
+    border-right: 1px solid $c-silver-chalice;
     overflow-y: auto;
 
     .c-menu {
@@ -86,30 +87,9 @@ body {
     }
 }
 
-.c-menu__child {
-    display: none;
-
-    .c-button {
-        padding-left: ($g-spacer * 2);
-    }
-
-    .c-menu__link {
-        padding-left: ($g-spacer * 2);
-    }
-
-    .c-menu__child {
-        .c-menu__link {
-            padding-left: ($g-spacer * 3);
-        }
-    }
-
-    &.is-active,
-    .is-active > & {
-        display: block;
-    }
-}
-
 .c-nav-page__title {
     padding: $g-spacer;
     margin: 0;
+    color: $c-gray;
+    font-size: $base-font-size;
 }

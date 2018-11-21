@@ -1,0 +1,22 @@
+.c-menu__child {
+    display: none;
+
+    .c-button {
+        padding-left: ($g-spacer * 2);
+    }
+
+    .c-menu__link {
+        padding-left: ($g-spacer * 2);
+    }
+
+    .c-menu__child {
+        .c-menu__link {
+            padding-left: ($g-spacer * 3);
+        }
+    }
+
+    &.is-active,
+    .is-active > & {
+        display: block;
+    }
+}
