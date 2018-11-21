@@ -63,8 +63,13 @@ body {
     overflow-y: auto;
 
     .c-menu {
-        padding-left: $g-spacer-sm;
         margin: 0;
+
+        .c-button {
+            margin: 0;
+            border-radius: 0;
+            text-align: left;
+        }
     }
 
     .c-menu__link {
