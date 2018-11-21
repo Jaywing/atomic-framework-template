@@ -10,9 +10,9 @@
 
 {% macro navItem(model)%}
   {% if model.children %}
-  <li class="c-menu__item c-menu__item--hasChildren">
+  <li class="c-menu__item has-children is-active">
     {% if model.disabled %}
-    <a class="c-menu__link c-text--disabled">
+    <a class="c-button c-button--primary c-button--block" data-module="Toggle" data-options='{"target":"parent"}'>
       {{model.title}}
     </a>
     {% else %}
@@ -20,7 +20,7 @@
       {{model.title}}
     </a>
     {% endif %}
-    <div class="c-menu__child c-menu__child--section">
+    <div class="c-menu__child">
       {{ navItems(model.children) }}
     </div>
   </li>

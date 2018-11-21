@@ -76,6 +76,15 @@ body {
     }
 }
 
+.c-menu__child {
+    display: none;
+
+    &.is-active,
+    .is-active > & {
+        display: block;
+    }
+}
+
 .c-nav-page__title {
     padding: $g-spacer;
     margin: 0;
